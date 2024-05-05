@@ -22,4 +22,12 @@ class event_type(reference):
         Returns:
             str: _description_
         """
-        return "deleted_nomenclature"
+        return f"deleted_nomenclature {str(id)}"
+
+    @staticmethod
+    def make_log_key():
+        return f"make_log"
+
+    @staticmethod
+    def make_log(type: str, text: str, source: str):
+        return f"make_log {type} {text} {source}"
